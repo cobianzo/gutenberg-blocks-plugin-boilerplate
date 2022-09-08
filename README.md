@@ -1,0 +1,1 @@
+# BOILERPLATE for CREATING BLOCKS in the same PLUGIN

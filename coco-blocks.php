@@ -37,7 +37,6 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 		/** fired when plugin starts */
 		public function __construct() {
 
-			
 			$this->setup_actions();
 
 		}
@@ -45,10 +44,9 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 		/** The very ENTRY POINT */
 		private function setup_actions() {
 
-			
 			// Main plugin hooks, if any. Create the functions if we use them. So far it's commented.
-			// >> `register_activation_hook( DIR_PATH, [ 'AwesomePlugin', 'activate'] );`
-			// >> `register_deactivation_hook( DIR_PATH, [ 'AwesomePlugin', 'deactivate' ] );`.
+			// >> `register_activation_hook( DIR_PATH, [ 'Coco_Blocks_Plugin', 'activate'] );`
+			// >> `register_deactivation_hook( DIR_PATH, [ 'Coco_Blocks_Plugin', 'deactivate' ] );`.
 
 			add_action( 'init', [ $this, 'register_blocks' ] );
 		}
