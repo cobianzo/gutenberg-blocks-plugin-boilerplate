@@ -6,6 +6,9 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"prettier": "@wordpress/prettier-config",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format && stylelint \"**/*.scss\" --fix",

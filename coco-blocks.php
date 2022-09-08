@@ -52,6 +52,7 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 
 			// OPTIONS FOR THE PLUGIN
 			// add_action( 'enqueue_block_assets', [ $this, 'optional_enqueue_if_block_is_present' ] );  // Frontend and CMS: Can only be loaded in the footer.  // @BOOK:EXTRA_JS_SCRIPTS
+			// if I want it only in the editor then 'enqueue_block_editor_assets' hook
 
 		}
 
