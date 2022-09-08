@@ -51,7 +51,7 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 			add_action( 'init', [ $this, 'register_blocks' ] );
 
 			// OPTIONS FOR THE PLUGIN
-			// add_action( 'enqueue_block_assets', [ $this, 'optional_enqueue_if_block_is_present' ] );  // Frontend and CMS: Can only be loaded in the footer.
+			// add_action( 'enqueue_block_assets', [ $this, 'optional_enqueue_if_block_is_present' ] );  // Frontend and CMS: Can only be loaded in the footer.  // @BOOK:EXTRA_JS_SCRIPTS
 
 		}
 
@@ -61,7 +61,7 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 			register_block_type( PLUGIN_PATH . '/build/block2' );
 		}
 
-		/** OPTIONAL. Deactivated by default. Load js in frontend the library 
+		/** OPTIONAL. @BOOK:EXTRA_JS_SCRIPTS. Deactivated by default. Load js in frontend the library 
 		 * Uncomment the 'add_action... ' to activate it */
 		public function optional_enqueue_if_block_is_present() {
 

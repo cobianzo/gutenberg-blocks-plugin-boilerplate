@@ -1,1 +1,0 @@
-{"version":3,"file":"block1/frontend.css","mappings":";;;AAAA;EACE;AACF,C","sources":["webpack://coco-blocks/./src/block1/optional-css.scss"],"sourcesContent":["body {\n  border: 50px dotted red;\n}"],"names":[],"sourceRoot":""}
