@@ -49,6 +49,10 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 			// >> `register_deactivation_hook( DIR_PATH, [ 'Coco_Blocks_Plugin', 'deactivate' ] );`.
 
 			add_action( 'init', [ $this, 'register_blocks' ] );
+
+			// OPTIONS FOR THE PLUGIN
+			// add_action( 'enqueue_block_assets', [ $this, 'optional_enqueue_if_block_is_present' ] );  // Frontend and CMS: Can only be loaded in the footer.
+
 		}
 
 		public function register_blocks() {
@@ -57,7 +61,37 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 			register_block_type( PLUGIN_PATH . '/build/block2' );
 		}
 
+		/** OPTIONAL. Deactivated by default. Load js in frontend the library 
+		 * Uncomment the 'add_action... ' to activate it */
+		public function optional_enqueue_if_block_is_present() {
+
+			if ( has_block( 'coco-blocks/block1' ) ) {
+				// this is the js needed to make the slider work in frontend. In backend we dont need it.
+				wp_enqueue_script(
+					'my-handle-js',
+					plugin_dir_url( __FILE__ ) . '/build/frontend.js', 
+					[], // @TODO: we could grab the dependencies from the file ./build/block1/frontend.asset.php .
+					'1.0.0',
+					true
+				);
+						// enqueue a css file.
+						wp_enqueue_style(
+							'my-handle-css',
+								//plugin_dir_url( __FILE__ ) . '/node_modules/@splidejs/splide/dist/css/splide.min.css',
+								plugin_dir_url( __FILE__ ) . '/build/frontend.css',
+								[],
+							1
+						);
+			}
+		}
+
+
+
+
+
+
 	}
 
+	// this triggers the setuo_actions
 	new Coco_Blocks_Plugin();
-}
+} // end of if.
