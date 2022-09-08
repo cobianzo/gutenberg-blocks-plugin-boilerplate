@@ -1,16 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "create-block/coco-blocks",
+  "name": "coco-blocks/block2",
   "version": "0.1.0",
-  "title": "Coco Blocks",
+  "title": "Coco Block 2",
   "category": "widgets",
   "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "The second block of the coco plugin",
   "supports": {
     "html": false
   },
-  "textdomain": "coco-blocks",
+  "textdomain": "coco",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

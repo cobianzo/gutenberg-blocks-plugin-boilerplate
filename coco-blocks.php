@@ -52,7 +52,9 @@ if ( ! class_exists( 'Coco_Blocks_Plugin' ) ) {
 		}
 
 		public function register_blocks() {
-			register_block_type( PLUGIN_PATH . '/build' );
+			// from here, check src/blockX/edit.js, save.js editor.scss and the other files
+			register_block_type( PLUGIN_PATH . '/build/block1' );
+			register_block_type( PLUGIN_PATH . '/build/block2' );
 		}
 
 	}
